@@ -1,0 +1,32 @@
+{
+  "name": "labExpress",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "main": "server.js"
+  },
+  "dependencies": {
+    "@reactivex/rxjs": "^5.4.3",
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "debug": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "^1.15.6",
+    "formidable": "^1.1.1",
+    "html": "^1.0.0",
+    "jade": "^1.11.0",
+    "latest": "*",
+    "mongoose": "^4.11.11",
+    "mongoose-geojson-schema": "^2.1.2",
+    "morgan": "*",
+    "node-fetch": "^1.7.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.4.0",
+    "passport-mongoose": "0.0.1",
+    "serve-favicon": "*"
+  }
+}
