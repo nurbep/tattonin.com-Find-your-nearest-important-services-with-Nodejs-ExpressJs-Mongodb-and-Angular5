@@ -1,0 +1,58 @@
+
+<div class="platform">
+<div class="container">
+<h3 *ngIf="data">{{data.success}}</h3>
+<fieldset>
+  <legend>Add a Service</legend>
+<form [formGroup]="myForm" (ngSubmit)="addSingleService()">
+<div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control input-sm" id="name" formControlName="name">
+</div>
+<div class="form-group">
+<label for="category">Select Category</label>
+<select class="form-control input-sm" id="category" formControlName="category">
+  <option>Hospital and Clinik</option>
+  <option>Police Station</option>
+  <option>RAB</option>
+  <option>Fire Service</option>
+</select>
+</div>
+<div class="form-group">
+<label for="latitude">Latitude</label>
+<input type="number" class="form-control input-sm" id="latitude" formControlName="latitude">
+</div>
+<div class="form-group">
+<label for="longitude">Longitude</label>
+<input type="number" class="form-control input-sm" id="longitude" formControlName="longitude">
+</div>
+<div class="form-group">
+<label for="address">Address</label>
+<textarea class="form-control input-sm" id="address" rows="3" formControlName="address">
+</textarea>
+</div>
+<div class="form-group">
+  <label for="district">Select district</label>
+  <select class="form-control input-sm" id="district" formControlName="district">
+    <option>Madaripur</option>
+    <option>Khulna</option>
+    <option>Dhaka</option>
+    <option>Chittagong</option>
+    <option>Rajshahi</option>
+  </select>
+</div>
+<div class="form-group">
+<label for="longitude">Mobile</label>
+<input type="number" class="form-control input-sm" id="mobile" formControlName="mobile">
+</div><div class="form-group">
+<label for="longitude">Tele Phone</label>
+<input type="number" class="form-control input-sm" id="telephone" formControlName="telephone">
+</div>
+
+<div class="form-group">
+<button type="submit" class="btn btn-primary" >Submit</button></div>
+
+</form>
+</fieldset>
+</div>
+</div>

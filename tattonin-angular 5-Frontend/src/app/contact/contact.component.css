@@ -1,0 +1,10 @@
+.container{
+    min-height: 680px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    text-align: left;
+}
+.contact{
+    text-align: left;
+}

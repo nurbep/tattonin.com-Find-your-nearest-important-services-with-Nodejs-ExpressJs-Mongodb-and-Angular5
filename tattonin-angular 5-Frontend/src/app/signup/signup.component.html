@@ -1,0 +1,41 @@
+
+<div class="container">
+        <fieldset>
+          <legend>Signup</legend>
+        <form #form="ngForm" (ngSubmit)="signup(form)">
+
+            <div class="form-group">
+                <label for="name" class="col-sm-12 col-form-label">Name</label>
+                <input type="text" class="form-control input-sm" id="name" required #name="ngModel" name="name" ngModel>
+                <span *ngIf="!name.valid">
+                    Name is required!
+                </span>
+              </div>
+
+        <div class="form-group">
+          <label for="username" class="col-sm-12 col-form-label">Email</label>
+          <input type="text" class="form-control input-sm"  id="username" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" #username="ngModel" name="username" ngModel>
+          <span *ngIf="!username.valid">
+              Email is required!
+          </span>
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="password" class="col-sm-12 col-form-label">Password</label>
+            <input type="password" class="form-control input-sm" required id="password" #pass="ngModel" minlength="5" maxlength="30" name="password" ngModel>
+            <span *ngIf="!pass.valid">
+                Password is invalid!
+            </span>
+          </div>
+    
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid" >Signup</button>
+        </div>
+        
+        </form>
+        </fieldset>
+     </div> 
+        
+          
+        

@@ -1,0 +1,41 @@
+
+
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">tattonin</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="home">Home</a></li>
+            <li><a routerLink="allServices">Services</a></li>
+            <li><a routerLink="createMessage">Contact Us</a></li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right" >
+        
+            <li *ngIf="!user" ><a routerLink="login">Login </a></li>
+            <li *ngIf="!user"><a routerLink="signup">Signup </a></li>
+            <li *ngIf="user" class="nav-item dropdown" id="profile">
+                
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{user.user.name}}
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a class="menu dropdown-item" routerLink="profile">{{user.user.name}}</a>
+                        </li>
+                      <li role="presentation"><a *ngIf="isAdminRole"  class="menu dropdown-item" routerLink="addService">Add a Service</a>
+                      </li>
+                      <li role="presentation"><a *ngIf="isAdminRole" class="menu dropdown-item" routerLink="allServices">Services List</a></li>
+                      <li role="presentation"><a *ngIf="isAdminRole" class="menu dropdown-item" routerLink="messages">Messages</a></li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" (click)="logout()" href="/">Logout</a></li>
+                    </ul>
+                  </div>
+
+              </li>
+        </ul>
+      </div>
+    </nav>
+ 
+
+
+  

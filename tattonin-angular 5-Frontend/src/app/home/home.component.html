@@ -1,0 +1,39 @@
+<div class="logo">
+  
+</div>
+<div class="input-group search">
+        <div class="input-group add-on">
+            <select class="form-control" id="category" #category placeholder="Select">
+                <option>Hospital and Clinik</option>
+                <option>Police Station</option>
+                <option>RAB</option>
+                <option>Fire Service</option>
+              </select>
+          <div class="input-group-btn">
+              <button class="btn btn-default"  (click)="getNearestServicesByCategory(category.value)"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+        </div>
+</div>
+
+
+<div class="platform">
+    <div class="comment">
+       <p class="comment heading">Your nearest services are below:</p>
+    </div>
+
+    <div class="container" *ngIf="services">
+    <div class="panel-group" *ngFor="let service of services.services">
+      <div class="panel .panel-info">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#{{service._id}}">{{service.name}}</a>
+          </h4>
+        </div>
+        <div id="{{service._id}}" class="panel-collapse collapse">
+          <div class="panel-body">Address: {{service.address}}</div>
+          <div class="panel-body">Contacts: {{service.mobile}},{{service.telephone}}</div>
+        </div>
+      </div>
+    </div>
+    </div>
+   </div> 

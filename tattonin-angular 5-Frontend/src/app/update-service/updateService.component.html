@@ -1,0 +1,44 @@
+<div *ngIf="success">Successfully updated.</div>
+<div class="container">
+<form #form="ngForm" (ngSubmit)="updateSingleService(form.value)">
+<div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control input-sm" id="name"  name="name" [(ngModel)]="service.service.name">
+</div>
+<div class="form-group">
+<label for="category">Select Category</label>
+<select class="form-control input-sm" id="category" name="category" [(ngModel)]="service.service.category">
+  <option>Hospital and Clinik</option>
+  <option>Police Station</option>
+  <option>RAB</option>
+  <option>Fire Service</option>
+</select>
+</div>
+<div class="form-group">
+<label for="address">Address</label>
+<textarea class="form-control input-sm" id="address" rows="3" name="address" [(ngModel)]="service.service.address">
+</textarea>
+</div>
+<div class="form-group">
+  <label for="district">Select district</label>
+  <select class="form-control input-sm" id="district" name="district" [(ngModel)]="service.service.district">
+    <option>Madaripur</option>
+    <option>Khulna</option>
+    <option>Dhaka</option>
+    <option>Chittagong</option>
+    <option>Rajshahi</option>
+  </select>
+</div>
+<div class="form-group">
+<label for="longitude">Mobile</label>
+<input type="number" class="form-control input-sm" id="mobile" name="mobile" [(ngModel)]="service.service.mobile">
+</div><div class="form-group">
+<label for="longitude">Tele Phone</label>
+<input type="number" class="form-control input-sm" id="telephone" name="telephone" [(ngModel)]="service.service.telephone">
+</div>
+
+<div class="form-group">
+<button type="submit" class="btn btn-primary" >Edit</button>
+</div>
+</form>
+</div>

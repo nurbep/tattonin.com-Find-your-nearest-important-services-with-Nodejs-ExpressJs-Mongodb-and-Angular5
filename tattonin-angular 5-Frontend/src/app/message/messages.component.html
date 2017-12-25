@@ -1,0 +1,6 @@
+<div class="container">
+    <h2>Messages</h2>
+    <ul class="list-group input-sm" *ngFor="let message of messages.messages">
+      <li class="list-group-item input-sm"><a [routerLink]="['/messageDetails',message._id]">{{message.name}}  -   {{message.created}}</a></li>
+    </ul>
+  </div>

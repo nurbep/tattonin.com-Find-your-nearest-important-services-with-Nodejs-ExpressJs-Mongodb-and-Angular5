@@ -1,0 +1,9 @@
+#profile{
+    margin-right:30px;
+}
+ul div.menu{
+    padding:2px;
+    border:1px solid blue;
+    display: block;
+    height: 15px;
+}
