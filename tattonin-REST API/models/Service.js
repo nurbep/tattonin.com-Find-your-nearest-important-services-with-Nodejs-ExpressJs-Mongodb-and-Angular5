@@ -1,12 +1,6 @@
 var GeoJSON = require('mongoose-geojson-schema');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-//var bcrypt = require('bcrypt-nodejs');
-
-// user schema
-
-
-
 var serviceSchema = new Schema({
       name: String,
       category : String,
@@ -15,8 +9,7 @@ var serviceSchema = new Schema({
       district:String,
       mobile:Number,
       telephone:Number
-      
-   });
+       });
 
 serviceSchema.index( {coord:"2d"} )
 module.exports = mongoose.model('Service', serviceSchema);
